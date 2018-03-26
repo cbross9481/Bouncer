@@ -1,13 +1,59 @@
 var points = 0;
-var x = 100;
-var id;
+var x = 200; var x1; var x2; var x3; var x4; var x5; var x6; var x7;
+var id; var attempt = 0;
 var score; var bool = false; var total = 0;
 
-document.getElementById("dot").addEventListener("click",display)
-score = Math.floor(Math.random()*25)+125;
-game_score = document.getElementById('game_score');
-text = document.createTextNode(score);
-game_score.appendChild(text);
+add_score();
+incorrect();
+hide_xs();
+
+function hide_xs(){
+	x1 = document.getElementById("x_1").style.visibility = 'hidden';
+	x2 = document.getElementById("x_2").style.visibility = 'hidden';
+	x3 = document.getElementById("x_3").style.visibility = 'hidden';
+	x4 = document.getElementById("x_4").style.visibility = 'hidden';
+	x5 = document.getElementById("x_5").style.visibility = 'hidden';
+	x6 = document.getElementById("x_6").style.visibility = 'hidden';
+	x7 = document.getElementById("x_7").style.visibility = 'hidden';
+}
+
+function add_score() {
+	document.getElementById("dot").addEventListener("click",display)
+	score = Math.floor(Math.random()*25)+125;
+	game_score = document.getElementById('game_score');
+	text = document.createTextNode(score);
+	game_score.appendChild(text);
+}
+
+function incorrect() {
+	document.getElementById('canvas').addEventListener("click",add_x);
+}
+
+function add_x() {
+	attempt += 1;
+	console.log(attempt);
+	if (attempt == 1){
+		document.getElementById("x_1").style.visibility = 'visible';
+	}
+	else if (attempt == 2) {
+		document.getElementById("x_2").style.visibility = 'visible';
+	}
+	else if (attempt == 3){
+		document.getElementById("x_3").style.visibility = 'visible';
+	}
+	else if (attempt == 4){
+		document.getElementById("x_4").style.visibility = 'visible';
+	}
+	else if (attempt == 5){
+		document.getElementById("x_5").style.visibility = 'visible';
+	}
+	else if (attempt == 6){
+		document.getElementById("x_6").style.visibility = 'visible';
+	}
+	else if (attempt == 7){
+		document.getElementById("x_7").style.visibility = 'visible';
+	}
+}
 
 function display() {
 	clearInterval(id);
