@@ -54,8 +54,8 @@
 	}
 	img {
 		position: relative;
-		top: 375px;
-		left: 100px;
+		top: 350px;
+		left: 120px;
 	}
 	#red {
 		position: relative;
@@ -101,9 +101,20 @@
 	}
 	#button_2 {
 		position: relative;
-		top: 75px;
+		top: 40px;
 	}
-
+	#You_Lose {
+		position: absolute;
+		top: 200px;
+	}
+	#You_Win {
+		position: absolute;
+		top: 200px;
+	}
+	#points {
+		position: relative;
+		left: 520px;
+	}
 	</style>
 </head>
 <body>
@@ -113,6 +124,7 @@
 <h1 id='score'>Bouncer!</h1>
 <h2 id='game_score'>Game Score: </h2>
 <h2 id='your_score'>Your Score: </h2>
+<h3 id='points'>Points: </h3>
 <img id="x_1" src="X_1.jpg" alt="Incorrect" width='50px' height='50px'>
 <img id="x_2" src="X_1.jpg" alt="Incorrect" width='50px' height='50px'>
 <img id="x_3" src="X_1.jpg" alt="Incorrect" width='50px' height='50px'>
@@ -127,6 +139,8 @@
 <div id="blue"></div>
 <div id="purple"></div>
 <button id="button_2" onclick="display_2()"><strong>NEW COLOR</strong></button>
+<img id='You_Lose' src='you_lose.jpg' alt="You Lose" width='300px' height='100px'>
+<img id='You_Win' src='You_Win.jpg' alt="You Win" width='300px' height='100px'>
 <script src="script.js"></script>
 
 </body>
