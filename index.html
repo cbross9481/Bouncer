@@ -101,7 +101,7 @@
 	}
 	#button_2 {
 		position: relative;
-		top: 40px;
+		top: px;
 	}
 	#You_Lose {
 		position: absolute;
@@ -115,6 +115,10 @@
 		position: relative;
 		left: 520px;
 	}
+	#levels {
+		position: relative;
+		left: 520px;
+	}
 	</style>
 </head>
 <body>
@@ -122,6 +126,18 @@
 <canvas id='dot'></canvas>
 <button id="button" onclick="myFunction()"><strong>TRY ME!</strong></button>
 <h1 id='score'>Bouncer!</h1>
+<form id='levels' method='POST'>
+	<label><strong>Level</strong></label>
+		<select id="level_select" onchange="display_3()">
+		<option value="1">1
+		<option value="2">2
+		<option value="3">3
+		<option value="4">4
+		<option value="5">5
+		<option value="6">6
+		<option value="7">7
+	</select>
+</form>
 <h2 id='game_score'>Game Score: </h2>
 <h2 id='your_score'>Your Score: </h2>
 <h3 id='points'>Points: </h3>

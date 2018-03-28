@@ -155,8 +155,40 @@ function display_2() {
 	x -= 2;
 	clearInterval(id);
 	myFunction();
-	// subtractPoint();
 }
+
+function display_3() {
+	bool_2 = true;
+	attempt = 0;
+	validate = [];
+	var level = document.getElementById('level_select').value;
+	clearInterval(id);
+	if (level == 1){
+		x = 200;
+	}
+	else if (level == 2){
+		x = 170;		
+	}
+	else if (level == 3){
+		x = 140;
+	}
+	else if (level == 4){
+		x = 110;
+	}
+	else if (level == 5){
+		x = 80;
+	}
+	else if (level == 6){
+		x = 50;
+	}
+	else if (level == 7){
+		x = 25;
+	}
+	hide_xs();
+	myFunction();
+
+}
+
 
 function myFunction(){
 	var canvas = document.getElementById("dot")
@@ -166,12 +198,11 @@ function myFunction(){
 	var up = 250; var down = 0; var right = 0; var left = 250; 
 	var array = [1,2,3,4];
 	console.log(bool);
-	if (bool == true && bool_2 == false) {
+	if (bool == true) {
 		removePoint();
+		console.log('hello');
 	}
-	if (bool_2 == false) {
 	addPoint();
-	}
 	id = setInterval(frame,x);
 	bool_2 = false;
 
@@ -183,8 +214,11 @@ function myFunction(){
 		new_point = document.getElementById('points');
 		text_3 = document.createTextNode(points);
 		new_point.appendChild(text_3);
+		if (bool_2 == false){
 		total += points;
+		}
 		bool = true;
+		
 	}
 
 	function removePoint() {
