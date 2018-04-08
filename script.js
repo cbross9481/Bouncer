@@ -8,7 +8,7 @@
 
 
 //Declaring Variables ---------------------------------------------------
-var points = 0;
+var points = 0; var hi;
 var x = 200; var x1; var x2; var x3; var x4; var x5; var x6; var x7;
 var id; var attempt = 0; var color_2; var bool_2 = false;
 var score; var bool = false; var total = 0; var old_total; var validate = [];
