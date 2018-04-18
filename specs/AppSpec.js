@@ -1,12 +1,15 @@
-describe ("Game Roll"), function() {
-
+describe ("Window Onload"), function() {
+//Test need to be dispersed properly into their respective groups
 
  beforeEach(function() {
-
+ 	window.onload();
  });
 
  it ("Update Game score after first play", function(){
-
+ 	add_score();
+ 	//game_score is not equal to null 
+ 	expect(score).not.toBeLessThan(0);
+ 	//get dot element by id and set it equal to score
 
  });
 
@@ -42,3 +45,32 @@ it("Negative test, to assure number greater than 30 or less than 15 are not chos
 
 });
 }
+
+describe ("Successful Point Attempt"), function() {
+
+ beforeEach(function() {
+
+ });
+}
+
+describe ("Unuccessful Point Attempt"), function() {
+
+ beforeEach(function() {
+
+ });
+}
+
+describe ("New Color Button"), function() {
+
+ beforeEach(function() {
+
+ });
+}
+
+describe ("Try Me Button"), function() {
+
+ beforeEach(function() {
+
+ });
+}
+
